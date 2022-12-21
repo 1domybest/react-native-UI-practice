@@ -1,14 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import LoginScreen from './src/screen/LoginScreen'
 import {Provider} from "react-redux";
 import store from "./store";
-import LoginScreen from './src/screen/LoginScreen'
-
 export default function App() {
   return (
-    <Provider store={store}>
-      <LoginScreen></LoginScreen>
-    </Provider>
+    <SafeAreaView>
+      <Provider store={store}>
+        <LoginScreen></LoginScreen>
+      </Provider>
+    </SafeAreaView>
   );
 }
 
