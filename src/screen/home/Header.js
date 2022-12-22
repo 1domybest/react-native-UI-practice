@@ -4,16 +4,16 @@ import Ionicons from '@expo/vector-icons/Ionicons'
 import FontAwesomeIcon from '@expo/vector-icons/FontAwesome'
 import EvilIcons from '@expo/vector-icons/EvilIcons'
 
-const Header = () => {
+const Header = ({navigation}) => {
   return (
     <View style={styles.container}>
         <TouchableOpacity>
-            <Image 
-                style={styles.logo} 
+            <Image
+                style={styles.logo}
                 source={require('../../../assets/header-logo.png')}/>
         </TouchableOpacity>
         <View style={styles.iconContainer}>
-            <TouchableOpacity style={styles.icon}>
+            <TouchableOpacity style={styles.icon} onPress={() => navigation.push('NewPostScreen')}>
                 <Ionicons name="add-circle-outline" size={28} color="white"/>
             </TouchableOpacity>
             <TouchableOpacity style={styles.icon}>
@@ -30,7 +30,7 @@ const Header = () => {
             </TouchableOpacity>
         </View>
     </View>
-  ) 
+  )
 }
 
 export default Header

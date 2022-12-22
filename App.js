@@ -4,10 +4,12 @@ import LoginScreen from './src/screen/LoginScreen'
 import {Provider} from "react-redux";
 import store from "./store";
 import HomeScreen from './src/screen/HomeScreen';
+import NewPostScreen from "./src/screen/NewPostScreen";
+import SignedInStack from "./src/screen/Navigation";
 export default function App() {
   return (
     <Provider store={store}>
-      <HomeScreen></HomeScreen>
+        <SignedInStack/>
     </Provider>
   );
 }
